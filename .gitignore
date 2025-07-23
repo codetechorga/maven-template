@@ -1,17 +1,173 @@
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-# https://maven.apache.org/wrapper/#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
+# =============================================================================
+# Maven Template .gitignore
+# 
+# This file excludes common build artifacts, IDE files, and other generated
+# content that should not be tracked in version control for Java/Maven projects
+# =============================================================================
 
-# Eclipse m2e generated files
-# Eclipse Core
-.project
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
+# Maven build directories and artifacts
+target/                          # Main Maven build output directory
+pom.xml.tag                      # Maven release plugin backup
+pom.xml.releaseBackup           # Maven release plugin backup
+pom.xml.versionsBackup          # Maven versions plugin backup
+pom.xml.next                    # Maven release plugin working file
+release.properties              # Maven release plugin properties
+dependency-reduced-pom.xml      # Maven shade plugin output
+buildNumber.properties          # Maven buildnumber plugin output
+
+# Maven wrapper (when not using the jar distribution)
+.mvn/timing.properties          # Maven timing data
+.mvn/wrapper/maven-wrapper.jar  # Maven wrapper jar (exclude if using wrapper without jar)
+# Note: Keep .mvn/wrapper/maven-wrapper.properties to ensure wrapper works
+
+# Keep source and test build directories accessible for IDE indexing
+!**/src/main/**/target/         # Allow IDE access to main build outputs
+!**/src/test/**/target/         # Allow IDE access to test build outputs
+
+# =============================================================================
+# IDE-specific files and directories
+# =============================================================================
+
+# Eclipse IDE
+.project                        # Eclipse project file
+.classpath                      # Eclipse classpath configuration
+.metadata/                      # Eclipse workspace metadata
+.recommenders/                  # Eclipse code recommenders data
+bin/                           # Eclipse compiled classes output
+tmp/                           # Eclipse temporary files
+*.tmp                          # Temporary files
+*.bak                          # Backup files
+*.swp                          # Vim swap files
+*~.nib                         # Interface Builder backup files
+
+# Eclipse m2e (Maven integration) generated files
+.settings/                      # Eclipse project settings
+
+# Spring Tool Suite (STS)
+.apt_generated                  # Annotation processing generated files
+.apt_generated_tests           # Test annotation processing files
+.factorypath                   # Eclipse factory path configuration
+.springBeans                   # Spring beans configuration
+.sts4-cache                    # STS4 cache directory
+
+# IntelliJ IDEA
+.idea/                         # IntelliJ IDEA project directory
+*.iws                          # IntelliJ workspace file
+*.iml                          # IntelliJ module file
+*.ipr                          # IntelliJ project file
+out/                           # IntelliJ compilation output
+.idea_modules/                 # IntelliJ modules directory
+atlassian-ide-plugin.xml       # Atlassian IDE plugin configuration
+
+# NetBeans IDE
+/nbproject/private/            # NetBeans private project files
+/nbbuild/                      # NetBeans build directory
+/dist/                         # NetBeans distribution directory
+/nbdist/                       # NetBeans distribution files
+/.nb-gradle/                   # NetBeans Gradle plugin files
+nbactions.xml                  # NetBeans actions configuration
+nb-configuration.xml           # NetBeans configuration
+
+# Visual Studio Code
+.vscode/                       # VS Code workspace settings
+*.code-workspace              # VS Code workspace files
+
+# =============================================================================
+# Build tool outputs and caches
+# =============================================================================
+
+# Gradle (if using Gradle alongside Maven)
+build/                         # Gradle build output
+.gradle/                       # Gradle cache and daemon files
+!**/src/main/**/build/         # Allow IDE access to main build outputs
+!**/src/test/**/build/         # Allow IDE access to test build outputs
+
+# =============================================================================
+# Operating System generated files
+# =============================================================================
+
+# Windows
+Thumbs.db                      # Windows thumbnail cache
+ehthumbs.db                    # Windows thumbnail cache
+Desktop.ini                    # Windows folder customization
+$RECYCLE.BIN/                  # Windows recycle bin
+
+# macOS
+.DS_Store                      # macOS folder metadata
+.AppleDouble                   # macOS AppleDouble format
+.LSOverride                    # macOS Launch Services override
+._*                            # macOS resource forks
+.Spotlight-V100                # macOS Spotlight index
+.Trashes                       # macOS trash folder
+.fseventsd                     # macOS file system events daemon
+.DocumentRevisions-V100        # macOS document versions
+.TemporaryItems               # macOS temporary items
+.VolumeIcon.icns              # macOS volume icon
+
+# Linux
+*~                            # Linux backup files
+.fuse_hidden*                 # Linux FUSE hidden files
+.directory                    # Linux KDE directory preferences
+.Trash-*                      # Linux trash folder
+
+# =============================================================================
+# Runtime and temporary files
+# =============================================================================
+
+# Logs
+*.log                         # General log files
+*.log.*                       # Rotated log files
+logs/                         # Log directories
+
+# Runtime data
+*.pid                         # Process ID files
+*.seed                        # Random seed files
+*.pid.lock                    # Process lock files
+
+# Coverage and testing
+*.gcov                        # GCC coverage files
+*.lcov                        # LCOV coverage files
+coverage/                     # Coverage reports directory
+.nyc_output/                  # NYC (Istanbul) coverage output
+
+# =============================================================================
+# Security and sensitive files
+# =============================================================================
+
+# Certificates and keys
+*.key                         # Private keys
+*.pem                         # PEM certificates
+*.p12                         # PKCS#12 certificates
+*.keystore                    # Java keystores
+*.jks                         # Java keystores
+
+# Environment and configuration
+.env                          # Environment variables file
+.env.local                    # Local environment variables
+.env.*.local                  # Local environment variables per environment
+config/local.properties       # Local configuration
+application-local.properties  # Spring Boot local configuration
+application-local.yml         # Spring Boot local configuration
+
+# =============================================================================
+# Package managers and dependencies
+# =============================================================================
+
+# Node.js (if using frontend build tools)
+node_modules/                 # Node.js dependencies
+npm-debug.log*               # NPM debug logs
+yarn-debug.log*              # Yarn debug logs
+yarn-error.log*              # Yarn error logs
+.pnpm-debug.log*             # PNPM debug logs
+
+# =============================================================================
+# Documentation and reports
+# =============================================================================
+
+# Generated documentation
+docs/_build/                  # Sphinx documentation build
+site/                         # MkDocs generated site
+
+# Reports
+*.tgz                         # Compressed archives
+*.tar.gz                      # Compressed archives
